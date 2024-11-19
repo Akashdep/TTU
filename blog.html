@@ -1,0 +1,111 @@
+# Enhancing "get-involved.html" with meaningful content
+get_involved_content = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Wildlife Guardians</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Wildlife Guardians Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="species.html">Species</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Get Involved</h1>
+            <p>Join us in protecting endangered species! Here are ways you can make a difference:</p>
+            <article>
+                <h2>Donate</h2>
+                <p>Your contributions help fund conservation projects and wildlife protection efforts.</p>
+                <a href="donate.html">Donate Now</a>
+            </article>
+            <article>
+                <h2>Volunteer</h2>
+                <p>Be part of our team and participate in hands-on conservation activities.</p>
+                <a href="volunteer.html">Sign Up to Volunteer</a>
+            </article>
+            <article>
+                <h2>Spread the Word</h2>
+                <p>Share our mission on social media and help raise awareness about wildlife conservation.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Wildlife Guardians | Designed by Akashdeep Singh and Harsh</p>
+    </footer>
+</body>
+</html>
+'''
+
+# Enhancing "contact.html" with meaningful content
+contact_content = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wildlife Guardians</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Wildlife Guardians Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="species.html">Species</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out to us with your questions or ideas:</p>
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Wildlife Guardians | Designed by Akashdeep Singh and Harsh</p>
+    </footer>
+</body>
+</html>
+'''
+
+# Update the files
+updated_files = {
+    "get-involved.html": get_involved_content,
+    "contact.html": contact_content
+}
+
+# Save the updated files
+for filename, content in updated_files.items():
+    with open(os.path.join(extraction_path, filename), 'w', encoding='utf-8') as file:
+        file.write(content)
+
+# Confirm the updates
+os.listdir(extraction_path)
+
